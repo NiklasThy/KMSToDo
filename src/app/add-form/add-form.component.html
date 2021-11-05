@@ -1,0 +1,15 @@
+<form id="add-todo-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="add-todo-title">Title</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Title" aria-label="Todo-Title"
+           aria-describedby="add-user-first-name" id="add-todo-title-input" formControlName="todoTitle">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="add-todo-description-name">Last name</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Description" aria-label="Todo-Description"
+           aria-describedby="add-user-last-name" id="add-todo-description-input" formControlName="todoDescription">
+    <button type="submit" class="btn btn-info ml-3">Add ToDo</button>
+  </div>
+</form>
