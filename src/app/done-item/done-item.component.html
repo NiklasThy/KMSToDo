@@ -1,9 +1,9 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{todo.title}}</h5>
+    <h5 class="card-title"> <del> {{todo.title}} </del> </h5>
     <p class="card-text">{{todo.description}}</p>
     <p class="card-text">{{todo.date | date}}</p>
     <a class="btn btn-primary btn-dark" (click)="deleteEvent.emit()">Delete</a>
-    <a class="btn btn-primary btn-dark ml-1" *ngIf="!todo.done" (click)="doneEvent.emit()">Done</a>
+    <a class="btn btn-primary btn-dark ml-1" *ngIf="todo.done" (click)="undoneEvent.emit()">undone</a>
   </div>
 </div>

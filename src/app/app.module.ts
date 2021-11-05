@@ -8,13 +8,15 @@ import { AddFormComponent } from './add-form/add-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { DoneItemComponent } from './done-item/done-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddFormComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    DoneItemComponent
   ],
     imports: [
         BrowserModule,
