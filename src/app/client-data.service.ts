@@ -34,6 +34,7 @@ export class ClientDataService {
           return
         }catch(error){
           console.log(error);
+          return
         }
       }
     }
