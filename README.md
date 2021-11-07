@@ -18,5 +18,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - Umstrukturierung des Projektes
     - Nun Angular
     - Aufgaben neu eingeteilt, andere Schätzungen etc.
-    - Leider etwas wirr, aber nun organisiert und am laufen
+    - Leider etwas wirr, aber nun organisiert und am laufe
+- Am 06.11.21 war git für einige Zeit nicht erreichbar, weshalb dort nicht viel am Projekt gemacht werden konnte
 
