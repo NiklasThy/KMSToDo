@@ -9,6 +9,9 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { DoneItemComponent } from './done-item/done-item.component';
+import { PrioItemComponent } from './prio-item/prio-item.component';
+import { PrioListComponent } from './prio-list/prio-list.component';
+import { PrioDoneItemComponent } from './prio-done-item/prio-done-item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { DoneItemComponent } from './done-item/done-item.component';
     AddFormComponent,
     TodoListComponent,
     TodoItemComponent,
-    DoneItemComponent
+    DoneItemComponent,
+    PrioItemComponent,
+    PrioListComponent,
+    PrioDoneItemComponent
   ],
     imports: [
         BrowserModule,

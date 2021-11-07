@@ -29,4 +29,12 @@ export class ClientDataService {
   public undone(index: number){
     this.todoList[index].done = false;
   }
+
+  public prioritize(index: number) {
+    this.todoList[index].prioritised = true;
+  }
+
+  public unprioritize(index: number) {
+    this.todoList[index].prioritised = false;
+  }
 }

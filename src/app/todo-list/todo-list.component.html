@@ -2,8 +2,10 @@
   <h5>{{title}}</h5>
 
   <div *ngFor="let item of clientData.todoList; let i = index" class="m-2">
-    <app-todo-item  *ngIf="!item.done" [todo]="item" (deleteEvent)="clientData.delete(i)" (doneEvent)="clientData.done(i)"></app-todo-item>
-    <app-done-item  *ngIf="item.done" [todo]="item" (deleteEvent)="clientData.delete(i)" (undoneEvent)="clientData.undone(i)"></app-done-item>
+    <app-todo-item  *ngIf="!item.prioritised && !item.done" [todo]="item" (deleteEvent)="clientData.delete(i)"
+                    (doneEvent)="clientData.done(i)" (prioritizeEvent)="clientData.prioritize(i)"></app-todo-item>
+    <app-done-item  *ngIf="!item.prioritised && item.done" [todo]="item" (deleteEvent)="clientData.delete(i)"
+                    (undoneEvent)="clientData.undone(i)" (prioritizeEvent)="clientData.prioritize(i)"></app-done-item>
   </div>
 
 </div>

@@ -2,16 +2,16 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ToDo} from "../ToDo";
 
 @Component({
-  selector: 'app-todo-item',
-  templateUrl: './todo-item.component.html',
-  styleUrls: ['./todo-item.component.css']
+  selector: 'app-prio-item',
+  templateUrl: './prio-item.component.html',
+  styleUrls: ['./prio-item.component.css']
 })
-export class TodoItemComponent implements OnInit {
+export class PrioItemComponent implements OnInit {
 
   @Input() todo: ToDo = new ToDo('', '');
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>()
   @Output() doneEvent: EventEmitter<void> = new EventEmitter<void>()
-  @Output() prioritizeEvent: EventEmitter<void> = new EventEmitter<void>()
+  @Output() unprioritizeEvent: EventEmitter<void> = new EventEmitter<void>()
 
   constructor() { }
 
