@@ -4,7 +4,7 @@
   <div *ngFor="let item of clientData.todoList; let i = index" class="m-2">
     <app-todo-item  *ngIf="!item.prioritised && !item.done && clientData.itemIsSearched(item)"
                     [todo]="item" (deleteEvent)="clientData.delete(i)"
-                    (doneEvent)="clientData.done(i)" (prioritizeEvent)="clientData.prioritize(i)"></app-todo-item>
+                    (doneEvent)="clientData.done(i)" (prioritizeEvent)="clientData.prioritize(i)" (editEvent)="clientData.edit(item.index)"></app-todo-item>
     <app-done-item  *ngIf="!item.prioritised && item.done && clientData.itemIsSearched(item)"
                     [todo]="item" (deleteEvent)="clientData.delete(i)"
                     (undoneEvent)="clientData.undone(i)" (prioritizeEvent)="clientData.prioritize(i)"></app-done-item>

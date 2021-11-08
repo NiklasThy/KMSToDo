@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit ToDo</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="form-group">
+    <label for="todoTitleInput">ToDo-Title</label>
+    <input type="text" class="form-control" id="todoTitleInput" [(ngModel)]="todoTitle">
+  </div>
+  <div class="form-group">
+    <label for="todoDescInput">ToDo-Description</label>
+    <input type="text" class="form-control" id="todoDescInput" [(ngModel)]="todoDesc">
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark"
+          (click)="activeModal.dismiss()">Schließen</button>
+  <button type="button" class="btn btn-success" (click)="save()">Speichern</button>
+</div>
