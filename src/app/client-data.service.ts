@@ -39,4 +39,8 @@ export class ClientDataService {
   public unprioritize(index: number) {
     this.todoList[index].prioritised = false;
   }
+
+  itemIsSearched(item: ToDo): boolean {
+    return item.title.includes(this.searchString) || item.description.includes(this.searchString);
+  }
 }
