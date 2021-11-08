@@ -12,6 +12,7 @@ export class PrioItemComponent implements OnInit {
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>()
   @Output() doneEvent: EventEmitter<void> = new EventEmitter<void>()
   @Output() unprioritizeEvent: EventEmitter<void> = new EventEmitter<void>()
+  @Output() editEvent: EventEmitter<void> = new EventEmitter<void>()
 
   constructor() { }
 
