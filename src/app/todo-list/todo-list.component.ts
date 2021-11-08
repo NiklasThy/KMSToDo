@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ClientDataService} from "../client-data.service";
+import {ToDo} from "../ToDo";
 
 @Component({
   selector: 'app-todo-list',
@@ -13,6 +14,10 @@ export class TodoListComponent implements OnInit {
   constructor(public clientData: ClientDataService) { }
 
   ngOnInit(): void {
+  }
+
+  isSearched(item: ToDo): boolean {
+    return item.title.includes(this.clientData.searchString) || item.description.includes(this.clientData.searchString);
   }
 
 }

@@ -11,6 +11,8 @@ export class ClientDataService {
     new ToDo("Rasen mähen", "Bis Freitag Rasen mähen!")
   ];
 
+  public searchString: string = "";
+
   constructor() { }
 
   public addToDo(title: string, description: string){
