@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ToDo} from "../ToDo";
+import {ClientDataService} from "../client-data.service";
 
 @Component({
   selector: 'app-prio-item',
@@ -14,9 +15,23 @@ export class PrioItemComponent implements OnInit {
   @Output() unprioritizeEvent: EventEmitter<void> = new EventEmitter<void>()
   @Output() editEvent: EventEmitter<void> = new EventEmitter<void>()
 
-  constructor() { }
+  constructor(public clientService: ClientDataService) { }
 
   ngOnInit(): void {
+  }
+
+  fillDropDownCategory(): Array<string> {
+    let categoryList: Array<string> = [];
+    this.clientService.todoList.forEach((todo) => {
+      if(todo.category && !categoryList.includes(todo.category)&&todo.title) {
+        categoryList.push(todo.category);
+      }
+    })
+    return categoryList;
+  }
+
+  setCategory(category: string, toDo: ToDo) {
+    toDo.category = category;
   }
 
 }

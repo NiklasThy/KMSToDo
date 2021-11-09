@@ -1,6 +1,16 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{todo.title}}</h5>
+    <p class="card-text"></p>
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="menu" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{todo.category}}
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" *ngFor="let category of fillDropDownCategory()" (click)="setCategory(category, this.todo)">{{category}}</a>
+      </div>
+    </div>
     <p class="card-text">{{todo.description}}</p>
     <p class="card-text">{{todo.date | date}}</p>
     <a class="btn btn-danger btn-dark" (click)="deleteEvent.emit()">Delete</a>
