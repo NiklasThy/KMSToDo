@@ -14,6 +14,7 @@ import { PrioListComponent } from './prio-list/prio-list.component';
 import { PrioDoneItemComponent } from './prio-done-item/prio-done-item.component';
 import {SearchBarComponent} from "./search-bar/search-bar.component";
 import {EditModalComponent} from "./edit-modal/edit-modal.component";
+import { TodoCategoryListComponent } from './todo-category-list/todo-category-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {EditModalComponent} from "./edit-modal/edit-modal.component";
     PrioListComponent,
     PrioDoneItemComponent,
     SearchBarComponent,
-    EditModalComponent
+    EditModalComponent,
+    TodoCategoryListComponent
   ],
     imports: [
         BrowserModule,

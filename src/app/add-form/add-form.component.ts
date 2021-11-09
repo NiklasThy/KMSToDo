@@ -11,7 +11,8 @@ export class AddFormComponent implements OnInit {
 
   form = new FormGroup({
     todoTitle: new FormControl(),
-    todoDescription: new FormControl()
+    todoDescription: new FormControl(),
+    todoCategory: new FormControl()
   });
 
   constructor(private clientData: ClientDataService) { }
@@ -20,7 +21,7 @@ export class AddFormComponent implements OnInit {
   }
 
   onSubmit(){
-    this.clientData.addToDo(this.form.value.todoTitle, this.form.value.todoDescription);
+    this.clientData.addToDo(this.form.value.todoTitle, this.form.value.todoDescription,this.form.value.todoCategory);
   }
 
 }

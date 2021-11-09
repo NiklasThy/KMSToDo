@@ -9,17 +9,18 @@ import {EditModalComponent} from "./edit-modal/edit-modal.component";
 export class ClientDataService {
 
   public todoList: ToDo[] = [
-    new ToDo("Einkaufen", "Für nächsten Mittwoch einkaufen gehen"),
-    new ToDo("Rasen mähen", "Bis Freitag Rasen mähen!")
+    new ToDo("Einkaufen", "Für nächsten Mittwoch einkaufen gehen",'Täglich'),
+    new ToDo("Rasen mähen", "Bis Freitag Rasen mähen!",'')
   ];
 
   public searchString: string = "";
 
   constructor(private modalService: NgbModal) { }
 
-  public addToDo(title: string, description: string){
-    let newTodo = new ToDo(title, description);
+  public addToDo(title: string, description: string, category:string){
+    let newTodo = new ToDo(title, description, category);
     this.todoList.push(newTodo);
+    console.log(this.todoList);
   }
 
   async edit(index: number){

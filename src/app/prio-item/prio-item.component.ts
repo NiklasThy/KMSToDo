@@ -8,7 +8,7 @@ import {ToDo} from "../ToDo";
 })
 export class PrioItemComponent implements OnInit {
 
-  @Input() todo: ToDo = new ToDo('', '');
+  @Input() todo: ToDo = new ToDo('', '','');
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>()
   @Output() doneEvent: EventEmitter<void> = new EventEmitter<void>()
   @Output() unprioritizeEvent: EventEmitter<void> = new EventEmitter<void>()

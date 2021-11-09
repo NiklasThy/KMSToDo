@@ -9,7 +9,7 @@ import {ClientDataService} from "../client-data.service";
 })
 export class DoneItemComponent implements OnInit {
 
-  @Input() todo: ToDo = new ToDo('', '');
+  @Input() todo: ToDo = new ToDo('', '','');
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>();
   @Output() undoneEvent: EventEmitter<void> = new EventEmitter<void>();
   @Output() prioritizeEvent: EventEmitter<void> = new EventEmitter<void>()
