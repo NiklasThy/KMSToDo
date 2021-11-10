@@ -23,9 +23,18 @@ describe('TodoItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should set the value to the given category',() => {
+
+  it('setCategory(...) should set the value to the given category',() => {
     component.setCategory("Success",component.todo)
     expect(component.todo.category).toBe("Success")
-  })
+  });
+
+  it('After todo has been added, it should be included within the returned category list of fillDropDownCategory()',() => {
+    let output: Array<string>;
+    component.clientService.addToDo("Math homework","Study for the test","Math")
+    output = component.fillDropDownCategory()
+    expect(output.includes("Math")).toBeTruthy()
+  });
+
 });
 
