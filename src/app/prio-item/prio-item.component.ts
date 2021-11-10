@@ -7,7 +7,7 @@ import {ClientDataService} from "../client-data.service";
   templateUrl: './prio-item.component.html',
   styleUrls: ['./prio-item.component.css']
 })
-export class PrioItemComponent implements OnInit {
+export class PrioItemComponent{
 
   @Input() todo: ToDo = new ToDo('', '','');
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>()
@@ -17,8 +17,6 @@ export class PrioItemComponent implements OnInit {
 
   constructor(public clientService: ClientDataService) { }
 
-  ngOnInit(): void {
-  }
 
   fillDropDownCategory(): Array<string> {
     let categoryList: Array<string> = [];

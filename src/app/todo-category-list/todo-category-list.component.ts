@@ -7,13 +7,11 @@ import {ToDo} from "../ToDo";
   templateUrl: './todo-category-list.component.html',
   styleUrls: ['./todo-category-list.component.css']
 })
-export class TodoCategoryListComponent implements OnInit {
+export class TodoCategoryListComponent {
 
   constructor(public clientService: ClientDataService) {
   }
 
-  ngOnInit(): void {
-  }
 
   getCategoryList(): Array<string> {
     let categoryList: Array<string> = [];

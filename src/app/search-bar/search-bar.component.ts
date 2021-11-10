@@ -7,13 +7,11 @@ import {ClientDataService} from "../client-data.service";
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css']
 })
-export class SearchBarComponent implements OnInit {
+export class SearchBarComponent{
   //@Output() onSearch: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(public clientData: ClientDataService) { }
 
-  ngOnInit(): void {
-  }
 
   onSearch(search: string) {
     this.clientData.searchString = search;

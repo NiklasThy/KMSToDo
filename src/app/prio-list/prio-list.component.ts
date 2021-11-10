@@ -6,13 +6,10 @@ import {ClientDataService} from "../client-data.service";
   templateUrl: './prio-list.component.html',
   styleUrls: ['./prio-list.component.css']
 })
-export class PrioListComponent implements OnInit {
+export class PrioListComponent {
 
   title: string = "Prioritised";
 
   constructor(public clientData: ClientDataService) { }
-
-  ngOnInit(): void {
-  }
 
 }
