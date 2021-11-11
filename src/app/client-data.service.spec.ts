@@ -32,5 +32,11 @@ describe('ClientDataService', () => {
     expect(service.todoList[0].prioritised).toBeTrue();
   });
 
+  it("should set todo on done", () => {
+    service.addToDo('Test Done', 'should set on done', 'Testing');
+    service.done(0);
+    expect(service.todoList[0].done).toBeTrue();
+  });
+
 
 });
