@@ -13,4 +13,9 @@ describe('ClientDataService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('todo should be added to array', () => {
+    service.addToDo('Test', 'Test Description', 'Testing');
+    expect(service.todoList.some(todo => todo.title === 'Test' && todo.description === 'Test Description' && todo.category === 'Testing')).toBeTrue();
+  })
 });
