@@ -26,5 +26,11 @@ describe('ClientDataService', () => {
     expect(service.todoList.length).toBeLessThan(beforeDeleteLength);
   });
 
+  it("should be able to prioritize a todo", () => {
+    service.addToDo('Prio Test ToDo', 'should get prioritized', 'Testing');
+    service.prioritize(0);
+    expect(service.todoList[0].prioritised).toBeTrue();
+  });
+
 
 });
