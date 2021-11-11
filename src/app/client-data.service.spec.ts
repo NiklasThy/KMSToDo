@@ -18,4 +18,13 @@ describe('ClientDataService', () => {
     service.addToDo('Test', 'Test Description', 'Testing');
     expect(service.todoList.some(todo => todo.title === 'Test' && todo.description === 'Test Description' && todo.category === 'Testing')).toBeTrue();
   })
+
+  it("should delete a todo", () => {
+    service.addToDo('Delete todo', 'Delete test','Testing');
+    let beforeDeleteLength = service.todoList.length;
+    service.delete(0);
+    expect(service.todoList.length).toBeLessThan(beforeDeleteLength);
+  });
+
+
 });
