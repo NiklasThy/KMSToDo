@@ -7,7 +7,7 @@ import {ClientDataService} from "../client-data.service";
   templateUrl: './done-item.component.html',
   styleUrls: ['./done-item.component.css']
 })
-export class DoneItemComponent implements OnInit {
+export class DoneItemComponent{
 
   @Input() todo: ToDo = new ToDo('', '','');
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>();
@@ -16,7 +16,5 @@ export class DoneItemComponent implements OnInit {
 
   constructor(public clientData: ClientDataService) { }
 
-  ngOnInit(): void {
-  }
 
 }

@@ -8,7 +8,7 @@ import {TodoCategoryListComponent} from "../todo-category-list/todo-category-lis
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css']
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent {
 
   @Input() todo: ToDo = new ToDo('', '','');
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>()
@@ -17,10 +17,6 @@ export class TodoItemComponent implements OnInit {
   @Output() editEvent: EventEmitter<void> = new EventEmitter<void>()
 
   constructor(public clientService: ClientDataService) { }
-
-  ngOnInit(): void {
-  }
-
 
   fillDropDownCategory(): Array<string> {
       let categoryList: Array<string> = [];

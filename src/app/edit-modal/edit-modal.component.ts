@@ -6,7 +6,7 @@ import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
   templateUrl: './edit-modal.component.html',
   styleUrls: ['./edit-modal.component.css']
 })
-export class EditModalComponent implements OnInit {
+export class EditModalComponent{
 
   public todoTitle: string;
   public todoDesc: string;
@@ -20,9 +20,6 @@ export class EditModalComponent implements OnInit {
     if(this.todoTitle.trim().length > 0 && this.todoDesc.trim().length > 0){
       this.activeModal.close([this.todoTitle, this.todoDesc]);
     }
-  }
-
-  ngOnInit(): void {
   }
 
 }

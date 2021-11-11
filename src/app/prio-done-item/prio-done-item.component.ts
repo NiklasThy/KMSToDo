@@ -7,7 +7,7 @@ import {ClientDataService} from "../client-data.service";
   templateUrl: './prio-done-item.component.html',
   styleUrls: ['./prio-done-item.component.css']
 })
-export class PrioDoneItemComponent implements OnInit {
+export class PrioDoneItemComponent{
 
   @Input() todo: ToDo = new ToDo('', '','');
   @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>();
@@ -15,8 +15,5 @@ export class PrioDoneItemComponent implements OnInit {
   @Output() unprioritizeEvent: EventEmitter<void> = new EventEmitter<void>()
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

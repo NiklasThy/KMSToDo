@@ -7,7 +7,7 @@ import {ClientDataService} from "../client-data.service";
   templateUrl: './add-form.component.html',
   styleUrls: ['./add-form.component.css']
 })
-export class AddFormComponent implements OnInit {
+export class AddFormComponent{
 
   form = new FormGroup({
     todoTitle: new FormControl(),
@@ -17,8 +17,6 @@ export class AddFormComponent implements OnInit {
 
   constructor(private clientData: ClientDataService) { }
 
-  ngOnInit(): void {
-  }
 
   onSubmit(){
     this.clientData.addToDo(this.form.value.todoTitle, this.form.value.todoDescription,this.form.value.todoCategory);
