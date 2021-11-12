@@ -38,5 +38,10 @@ describe('ClientDataService', () => {
     expect(service.todoList[0].done).toBeTrue();
   });
 
+  it("should set todo on undone", () => {
+    service.addToDo('Test Undone', 'should set on undone', 'Testing');
+    service.undone(0);
+    expect(service.todoList[0].done).toBeFalse();
+  });
 
 });
