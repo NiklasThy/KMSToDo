@@ -44,4 +44,12 @@ describe('ClientDataService', () => {
     expect(service.todoList[0].done).toBeFalse();
   });
 
+  it('should return the todo is searched', () => {
+    service.addToDo('Test Search', 'Should return true', 'Testing');
+    let index: number = service.todoList.length - 1;
+    service.searchString = "Search";
+    let expected: boolean = service.itemIsSearched(service.todoList[index]);
+    expect(expected).toBeTrue();
+  });
+
 });
