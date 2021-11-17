@@ -5,4 +5,4 @@ RUN npm i
 RUN npm run build:prod
 
 FROM nginx:latest
-COPY --from=builder /app/dist/KMSToDo /usr/share/nginx/html
+COPY --from=builder /app/dist/todoKMS /usr/share/nginx/html
