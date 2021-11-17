@@ -12,5 +12,3 @@ eslint:
 tslint:
   enabled: true
 
-ruby:
-  enabled: false
