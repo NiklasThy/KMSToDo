@@ -67,7 +67,10 @@ export class ClientDataService {
     return item.title.includes(this.searchString) || item.description.includes(this.searchString);
   }
 
-  uselessFunction(text: string){
-    for(let i:number= 5;i< 10;i++ ){console.log(text); if(text.length == 5){i++;}}
+    uselessFunction(text: string){
+    for(let i:number= 5;i< 10;i++
+    ){console.log
+    (text); if(text.length
+      == 5){i++;}}
   }
 }
