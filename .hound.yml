@@ -5,8 +5,11 @@ scss:
 
 jshint:
   enabled: true
-  
+
 eslint:
+  enabled: true
+
+tslint:
   enabled: true
 
 ruby:
