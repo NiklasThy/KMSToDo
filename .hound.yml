@@ -5,9 +5,9 @@ scss:
 
 jshint:
   enabled: true
-  
+
 eslint:
   enabled: true
 
-ruby:
-  enabled: false
+tslint:
+  enabled: true
