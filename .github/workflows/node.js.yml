@@ -50,7 +50,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
       - name: Deploy to GitHub Pages
-        uses: NiklasThy/angular-deploy-gh-pages-actions@v1.3.2
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
         with:
           github_access_token: ${{ secrets.ACCESS_TOKEN }}
           base_href: /todo/ 
