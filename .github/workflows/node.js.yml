@@ -26,6 +26,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      - name: Install angularCLI
+        run: npm install -g @angular/cli
       - name: Build
         run: ng build
       - name: Test
