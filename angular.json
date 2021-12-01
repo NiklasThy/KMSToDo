@@ -38,6 +38,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/KMSToDo/",
               "budgets": [
                 {
                   "type": "initial",

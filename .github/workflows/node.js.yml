@@ -29,7 +29,7 @@ jobs:
       - name: Install angularCLI
         run: npm install -g @angular/cli
       - name: Build
-        run: ng build --base-href /KMSToDo/
+        run: ng build
       - name: Test
         run: npm run test:prod
       - run: npm run lint
